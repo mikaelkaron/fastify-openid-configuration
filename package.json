@@ -1,0 +1,54 @@
+{
+  "name": "fastify-openid-configuration",
+  "version": "0.0.0",
+  "description": "Fastify configuration plugin for openid-client",
+  "type": "module",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.js",
+    "./configuration": "./dist/configuration.js",
+    "./plugin": "./dist/plugin.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc --declaration -p tsconfig.json",
+    "clean": "shx rm -rf dist",
+    "check": "biome check",
+    "lint": "biome lint",
+    "semantic-release": "semantic-release"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mikaelkaron/fastify-openid-configuration.git"
+  },
+  "files": ["dist/"],
+  "keywords": ["fastify", "openid"],
+  "author": "Mikael Karon <mikael@karon.se>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mikaelkaron/fastify-openid-configuration/issues"
+  },
+  "homepage": "https://github.com/mikaelkaron/fastify-openid-configuration#readme",
+  "dependencies": {
+    "async-retry": "^1.3.3",
+    "fastify-plugin": "^5.0.1",
+    "jose": "^5.9.6",
+    "openid-client": "^6.1.7"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^13.0.0",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^11.0.1",
+    "@semantic-release/npm": "^12.0.1",
+    "@semantic-release/release-notes-generator": "^14.0.2",
+    "@tsconfig/node22": "^22.0.0",
+    "@types/async-retry": "^1.4.9",
+    "fastify": "^5.2.0",
+    "semantic-release": "^24.2.0",
+    "shx": "^0.3.4",
+    "typescript": "^5.7.2"
+  }
+}
